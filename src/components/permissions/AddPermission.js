@@ -10,7 +10,7 @@ class AddPermission extends Component
 		super(props);
 		this.state={
         permissionName:"",
-		moduleIds:["User", "Document","Group","Task"],
+		moduleIds:["select","User", "Document","Group","Task"],
 		moduleId:""
        }
 
@@ -70,7 +70,7 @@ class AddPermission extends Component
                                  <input type="text"  className={classnames("form-control form-control-lg")} name="permissionName" onChange={this.onChange1}/> 
 							 </div>
 							
-                             <h5 className="float-left">select Module</h5>
+                             <h5 className="float-left">Module</h5>
 							 <div className="form-group">
 		
   							

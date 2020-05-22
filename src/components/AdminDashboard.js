@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { PropTypes } from "prop-types";
 import CreatePermissionButton  from "./permissions/CreatePermissionButton";
-import ListPermissionButton from "./permissions/ListPermissionButton";
+import ViewPermissionButton from "./permissions/ViewPermissionButton";
+// import AssignPermissionButton from "./permissions/AssignPermissionButton";
 
  class Dashboard extends Component 
  {
@@ -12,8 +13,8 @@ import ListPermissionButton from "./permissions/ListPermissionButton";
                  <h1> Dashboard</h1>
                  <br/><br/>
                  <CreatePermissionButton/><br/> <br/>
-                 <ListPermissionButton/><br/><br/>
-                 <AssignPermissionButton/><br/>
+                 <ViewPermissionButton/><br/><br/>
+                 {/* <AssignPermissionButton/><br/> */}
              </div>
          );
      }

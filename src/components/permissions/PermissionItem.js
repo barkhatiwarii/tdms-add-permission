@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom';
 
 import { connect } from "react-redux";
 import { PropTypes } from "prop-types";
-// import { deleteAssignment } from "../.././actions/assignmentActions";
+import { deletePermission } from "../.././actions/permissionActions";
 class PermissionItem extends Component
 {
 
-// onDeleteClick = id => {
-//     console.log("-------> method called.");
-//     this.props.deleteAssignment(id);
-//   };
+onDeleteClick = id => {
+    console.log("-------> method called.");
+    this.props.deletePermission(id);
+  };
 	render(){
         const { permission }=this.props;
 		return(
@@ -18,25 +18,25 @@ class PermissionItem extends Component
                                 
                                 <tr>
                                     <td>#</td>
-                                    <td>{assignment.permissionName}</td>
+                                    <td>{permission.permissionName}</td>
                                     <td>
-                                    {/* <button type="button" className="btn btn-light" onClick={this.onDeleteClick.bind(this,
-                                                  assignment.id
+                                    <button type="button" className="btn btn-light" onClick={this.onDeleteClick.bind(this,
+                                                  permission.id
                                                    )}>Delete</button>&nbsp;&nbsp; */}
-                                    {/* <Link to={`/updateAssignment/${assignment.assignmentIdentifier}`}>
+                                     <Link to={`/updatePermission/${permission.id}`}>
                                     <button type="button" className="btn btn-light">Edit</button>&nbsp;&nbsp;
                                     </Link>
-                                    */}test
+                                   test
                                     </td>
                                     </tr>
             );
             }
 }
 PermissionItem.propTypes = {
-  deleteAssignment: PropTypes.func.isRequired
+  deletePermission: PropTypes.func.isRequired
 };
 
 export default connect(
   null,
-  { deleteAssignment }
-)(AssignmentItem);
+  { deletePermission }
+)(PermissionItem);

@@ -6,42 +6,26 @@ import GroupModule from './GroupModule';
 import AssignmentModule from './AssignmentModule';
 import TaskModule from './TaskModule';
 class ListModules extends Component {
-
+    // componentDidMount() {
+    //     const { moduleId } = this.props.match.params;
+    //     this.props.getPermission(moduleId, this.props.history);
+    //   }
     render() {
-
+        // const permissions = this.props.permissions.permissions;
         return (
-
-
-
-
-            <div class="container  px-4 py-4" id="module_list_container" >
-                  <h3 className="font-weight-bold text-center py-3">View Permissions</h3>
-                <div className="row row-cols-2 ">
-
-                    <div class="col">
-                   <DocumentModule />
-
-                    </div>
-
-                    <div className="col"> 
-                   <UserModule />
-                   </div>
-
-
-                    <div class="col">
-                        <GroupModule />
-                   </div>
-
-                   <div class="col"> 
-                    <AssignmentModule />
-                       </div>
-
-                </div>
-                <div class="col ml-5">  
-                <TaskModule />
-                </div>
+            <div className="container">
+            <br/>
+            
+            {/* <Link to={`/listPermissions/User`}>
+            
+            </Link>    */}
+            <UserModule/> <br/> <br/>
+                        <TaskModule/> <br/> <br/>
+                        <DocumentModule/> <br/> <br/>
+                        <GroupModule/> <br/>
+                        {/* <AssignmentModule/>  */}
+                
             </div>
-
 
 
 
