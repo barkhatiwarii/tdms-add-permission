@@ -10,7 +10,8 @@ class AddPermission extends Component
 		super(props);
 		this.state={
         permissionName:"",
-        moduleId:['user module','group module','','4','5']
+		moduleIds:["User", "Document","Group","Task"],
+		moduleId:""
        }
 
 	   this.onChange1=this.onChange1.bind(this);
@@ -28,7 +29,7 @@ class AddPermission extends Component
         event.preventDefault();
         const newPermission={
             permissionName:this.state.permissionName,
-            moduleId:this.state.moduleId
+			moduleId:this.state.moduleId,
         };
         console.log(newPermission);
         this.props.createPermission(newPermission,this.props.history);
@@ -71,9 +72,11 @@ class AddPermission extends Component
 							
                              <h5 className="float-left">select Module</h5>
 							 <div className="form-group">
-							<select name="moduleId" value={this.state.moduleId} onChange={this.onChange1} className="form-control form-control-lg">
-							     {this.state.moduleId.map(function(moduleId){
-									return <option value={moduleId}>{moduleId}</option>
+		
+  							
+								<select name="moduleId" value={this.state.moduleId} onChange={this.onChange1} className="form-control form-control-lg">
+							     {this.state.moduleIds.map(function(module){
+									return <option value={module}>{module}</option>
 								 })}
                                  
                              </select>

@@ -4,8 +4,8 @@ import { GET_PERMISSIONS,GET_PERMISSION } from "./type";
 
 export const createPermission=(newPermission,history)=>async dispatch=>{
 	
-		const res=await axios.post("http://localhost:8080/api/permissions",newPermission);
-		history.push("/listPermission");
+		const res=await axios.post("http://localhost:8080/api/permission",newPermission);
+		history.push("/dashboard");
 	
 };
 

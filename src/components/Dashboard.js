@@ -12,7 +12,8 @@ import ListPermissionButton from "./permissions/ListPermissionButton";
                  <h1> Dashboard</h1>
                  <br/><br/>
                  <CreatePermissionButton/><br/> <br/>
-                 <ListPermissionButton/><br/>
+                 <ListPermissionButton/><br/><br/>
+                 <AssignPermissionButton/><br/>
              </div>
          );
      }

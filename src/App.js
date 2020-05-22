@@ -20,6 +20,7 @@ function App() {
     
     <Route path="/Dashboard" component={Dashboard} />
     <Route path="/addPermission" component={AddPermission} />
+
   
     
     </div>
